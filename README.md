@@ -7,11 +7,11 @@ Welcome to Bite-Tales, an E-commerce Landing Page project! This document serves 
 The project is organized as follows:
 - **/src:** Contains the source code for the landing page.
 - **/assets:** Store images, stylesheets, or any additional assets here.
-- **/docs:** Documentation files, including this "READ ME" file.
 
 ## Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bite-tales-landing.git
+   git clone https://github.com/abdullahriad-alghamdi/Bite-Tales-landing-page.git
+   
 
 
