@@ -1,0 +1,13 @@
+/**========================
+ **      Scrollbar styles
+ *==========================**/
+@use "variables" as *;
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: $secondary-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $tertiary-color;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Abdullah Alghamdi" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bite Tales Restaurant" />
+    <meta
+      name="keywords"
+      content=" food, restaurant, Bite Tales, food, drinks, dessert"
+    />
+    <!-- to add cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+    <title>Bite Tales</title>
+  </head>
+
+  <body>
+    <!-- header section -->
+    <header>
+      <!-- navigation section -->
+      <section class="navigation">
+        <!-- logo -->
+        <div class="logo">
+          <img src="assets\BiteTales_header_logo.png" alt="BiteTales logo" />
+        </div>
+        <!-- navigation menu -->
+        <nav class="navigation-menu">
+          <ul role="menubar" aria-labelledby="navigation-bar">
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="index.html">Home</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="#">Menu</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="#">Order</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- hero section -->
+      <section class="hero-slider">
+        <video class="slider__video" autoplay muted loop>
+          <source src="assets\video1.mp4" type="video/mp4" />
+        </video>
+
+        <div class="slider-container">
+          <!-- headline -->
+          <h1 class="slider-container__headline">Good Food, Great Moments</h1>
+          <!-- subheading -->
+          <p class="slider-container__subheading">
+            Where Every Bite Tells a Delicious Story.
+          </p>
+          <!-- call-to-action button -->
+          <button class="slider-container__btn" aria-label="Buy Now a meal">
+            Buy Now
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <!-- main section -->
+    <main>
+      <!-- products section -->
+      <section class="products">
+        <div class="product">
+          <img src="assets\product1.jpg" alt="Burger Image" />
+          <div class="product__description">
+            <h2>Gourmet Burger Bliss</h2>
+            <p>
+              Sink your teeth into our signature gourmet burger. A juicy patty,
+              topped with melted cheese, crispy bacon, fresh lettuce, and a
+              secret sauce, all served on a toasted brioche bun.
+            </p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="assets\product2.jpg" alt="Vegetable Stew image" />
+          <div class="product__description">
+            <h2>Hearty Vegetable Stew</h2>
+            <p>
+              Our hearty vegetable stew is a comforting blend of seasonal
+              veggies, simmered to perfection in a rich, flavorful broth. Served
+              with warm crusty bread, it's a warm hug on a plate.
+            </p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="assets\product3.jpg" alt="Shrimp image" />
+          <div class="product__description">
+            <h2>Crispy Tempura Shrimp</h2>
+            <p>
+              Dive into a plate of golden-brown tempura shrimp. Each bite is a
+              delightful combination of crispy batter and tender shrimp, served
+              with a side of tangy dipping sauce.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- customers reviews section -->
+      <section class="customers">
+        <div class="customer">
+          <img src="assets\customer1.jpg" alt="customer1 image" />
+          <h2>Emily H.</h2>
+          <!-- rating -->
+          <label><span> ⭐⭐⭐⭐ </span></label>
+          <p>
+            I'm a fan of vegetarian options, and Bite Tales didn't disappoint.
+            The mouthwatering veggie wrap was packed with fresh ingredients, and
+            I loved the creamy hummus. It's now my go-to place for a healthy and
+            tasty lunch!
+          </p>
+        </div>
+        <div class="customer">
+          <img src="assets\customer2.jpg" alt="customer2 image" />
+          <h2>John M.</h2>
+          <!-- rating -->
+          <label><span> ⭐⭐⭐⭐⭐ </span></label>
+          <p>
+            The gourmet burger at Bite Tales is a real treat! It's juicy,
+            cheesy, and simply delicious. The only reason I didn't give it 5
+            stars is because the portion size could be a bit bigger. But
+            overall, a great meal!
+          </p>
+        </div>
+        <div class="customer">
+          <img src="assets\customer3.jpg" alt="customer3 image" />
+          <h2>Sarah T.</h2>
+          <!-- rating -->
+          <label><span> ⭐⭐⭐⭐⭐ </span></label>
+          <p>
+            I had the pleasure of dining at Bite Tales last night, and it was an
+            absolute delight! The savory grilled chicken skewers were bursting
+            with flavor, and the atmosphere was cozy and inviting. I'll
+            definitely be returning for more.
+          </p>
+        </div>
+      </section>
+      <!-- newsletters section -->
+      <section class="newsletter">
+        <h2>Stay in the Flavor Loop with Bite Tales! 🍽️</h2>
+        <form class="newsletter__form" action="">
+          <label for="email"
+            >Subscribe to our newsletter for the latest news, menu updates, and
+            special offers.</label
+          >
+          <div>
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <button aria-label="Subscribe to our newsletter" type="submit">
+              Subscribe Now
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+      <section class="footer-image">
+        <img src="assets/BiteTales_footer_logo.png" alt="BiteTales logo" />
+        <ul role="menubar">
+          <li role="none">
+            <a
+              role="menuitem"
+              class="fa-brands"
+              tabindex="0"
+              aria-label="Twitter icon"
+              href="#"
+              ><i class="fa-brands fa-square-x-twitter"></i
+            ></a>
+          </li>
+          <li role="none">
+            <a
+              role="menuitem"
+              aria-label="Instagram icon"
+              class="fa-brands"
+              tabindex="0"
+              href="#"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+          </li>
+          <li role="none">
+            <a
+              role="menuitem"
+              aria-label="Youtube icon"
+              class="fa-brands"
+              tabindex="0"
+              href="#"
+              ><i class="fa-brands fa-square-youtube"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+      <section class="footer-maps">
+        <div class="quick-links">
+          <h2>Quick Links</h2>
+          <ul role="menubar">
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="index.html">Home</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="#">Menu</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="#">Order</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" tabindex="0" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-us">
+          <h2>Contact Us</h2>          
+          <form action="" class="contact-us__form">
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email" />
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="20" rows="10"></textarea>
+            <button aria-label="Send message" type="submit">Send</button>
+
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
+

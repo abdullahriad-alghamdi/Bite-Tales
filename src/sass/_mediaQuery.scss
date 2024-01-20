@@ -1,0 +1,153 @@
+@media screen and (max-width: 1040px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2em;
+      width: 100vw;
+
+      .logo {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navigation-menu {
+        display: none;
+      }
+    }
+
+    .hero-slider {
+      width: 100vw;
+      .logo img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navigation-menu {
+        display: none;
+      }
+    }
+
+    .hero-slider {
+      width: 100vw;
+      gap: 2em;
+
+      .slider__video {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .slider-container {
+        width: 100%;
+        height: 100%;
+        gap: 2em;
+
+        h1 {
+          font-size: 2rem;
+          margin-bottom: 0.3em;
+        }
+
+        p {
+          font-size: 1.5rem;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 0 2em;
+
+    .products {
+      margin: 0;
+      padding: 0;
+      gap: 2em;
+      justify-content: center;
+
+      .product {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin: 0;
+        font-size: 0.5rem;
+        padding: 2em;
+
+        img {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .product__description {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          gap: 2em;
+        }
+      }
+    }
+
+    .customers {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      padding: 0;
+
+      .customer {
+        padding: 5rem;
+        gap: 2em;
+      }
+    }
+
+    .newsletter {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      gap: 2em;
+      height: fit-content;
+
+      .newsletter__form {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 2em;
+
+        input {
+          width: 100%;
+          margin: 2em 0;
+          padding: 0;
+        }
+
+        button {
+          width: 100%;
+          margin-bottom: 8em;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

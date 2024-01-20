@@ -1,0 +1,312 @@
+/**------------------------------------------------------------------------
+ *                           Global styles
+ *------------------------------------------------------------------------**/
+@forward "main";
+@forward "mediaQuery";
+@forward "reset";
+@forward "scrollbar";
+@use "mixin";
+
+@import "variables";
+// @import "mediaQuery";
+// i want to add mediaQuery as a Partial in this file:
+/**========================
+ **      Body Styles
+ *==========================**/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  width: 100%;
+  height: 100%;
+}
+
+/**------------------------------------------------------------------------
+ *                           Header styles
+ *------------------------------------------------------------------------**/
+
+header {
+  /* -------- Navigation -------- */
+  .navigation {
+    @include mixin.flex-style;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $tertiary-color;
+    z-index: 999;
+    border-bottom: 5px solid $primary-color;
+
+    .logo img {
+      width: 250px;
+      height: 50px;
+      margin: 0 1em;
+      object-fit: cover;
+    }
+
+    /* -------- Navigation menu -------- */
+
+    .navigation-menu {
+      ul {
+        @include mixin.flex-style;
+
+        li {
+          margin: 0 1em;
+          padding: 1em;
+          list-style-type: none;
+
+          a {
+            text-decoration: none;
+            color: #411414;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            &:hover {
+              color: rgb(156, 39, 57);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* -------- Hero Section -------- */
+
+  .hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: $white;
+    margin-bottom: 8em;
+
+    .slider__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      button {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffffff29;
+        color: $white;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+/**------------------------------------------------------------------------
+ *                           Footer styles
+ *------------------------------------------------------------------------**/
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: $tertiary-color;
+  border-top: 4px solid $primary-color;
+  height: 20rem;
+
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      color: $primary-color;
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .footer-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+
+    img {
+      display: block;
+      width: 30rem;
+      height: 7rem;
+      object-fit: cover;
+    }
+    ul {
+      gap: 3em;
+    }
+    .fa-brands {
+      font-size: 1.7em;
+
+      i {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .footer-maps {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 5em;
+    padding: 0 6em;
+    margin-top: 2em;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.3em;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: 0.9em;
+        list-style: circle inside;
+        margin-left: 2em;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .contact-us {
+      display: flex;
+      flex-direction: column;
+
+      .contact-us__form {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        gap: 0.4em;
+        height: 10%;
+        font-size: 1.2rem;
+        margin: 0 2em;
+
+        // input & textarea
+        input,
+        textarea,
+        button {
+          width: 12rem;
+          height: 3.1rem;
+          background-color: #5454542d;
+          border: none;
+          resize: none;
+          overflow: hidden;
+          font-size: 0.5rem;
+          border-radius: 5px;
+          padding: 2em;
+          color: $secondary-color;
+          font-weight: 900;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        textarea {
+          font-size: x-small;
+        }
+        button {
+          width: 3.5rem;
+          border-radius: 5px;
+          background-color: $black;
+          color: $white;
+          cursor: pointer;
+          text-align: center;
+          line-height: 0.2;
+          margin-top: 2em;
+          padding: 1.9em;
+        }
+      }
+    }
+  }
+}
+
+/**------------------------------------------------------------------------
+ *                           Media queries
+ *------------------------------------------------------------------------**/
+
+@media screen and (max-width: 1040px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .footer-image {
+      width: 100%;
+      height: 100%;
+      margin-top: 5em;
+      align-self: start;
+
+      img {
+        object-fit: cover;
+        margin-top: 2em;
+      }
+    }
+
+    .footer-maps {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2em;
+      padding: 0 2em;
+
+      .quick-links {
+        width: 100%;
+        align-self: start;
+        margin: 2em 0;
+      }
+
+      .contact-us {
+        width: 100%;
+        align-self: start;
+        margin: 2em 0;
+      }
+    }
+  }
+}

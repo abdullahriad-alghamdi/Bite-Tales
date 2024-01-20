@@ -1,0 +1,158 @@
+@use "variables" as *;
+@use "mixin";
+
+/**------------------------------------------------------------------------
+ *                           Main styles
+ *------------------------------------------------------------------------**/
+
+main {
+  /*---- Products ----*/
+
+  .products {
+    @include mixin.flex-style;
+    flex-direction: column;
+    color: #000;
+    align-items: center;
+    padding: 1em;
+    gap: 5em;
+
+    .product {
+      @include mixin.flex-style;
+      margin: 1.1em;
+      padding: 1.1em;
+      border: 2px solid #000000;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+
+      img {
+        width: 25rem;
+        height: 25rem;
+        margin: 1.1em;
+        object-fit: cover;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .product__description {
+        @include mixin.flex-style;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1.1em;
+
+        h2 {
+          font-size: 4rem;
+          margin-bottom: 0.3em;
+        }
+
+        p {
+          font-size: 2.2rem;
+          margin-bottom: 1em;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  /*---- Customers ----*/
+
+  .customers {
+    @include mixin.flex-style;
+    padding: 10em;
+    box-shadow: 0 1px 5px $black-shadow;
+    justify-content: space-around;
+    text-align: justify;
+    gap: 2em;
+    background-color: $tertiary-color;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .customer {
+      @include mixin.flex-style;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1em;
+      border: 2px solid #000000;
+      padding: 1.1em;
+      box-shadow: 0 0 5px $black-shadow;
+      border-radius: 5px;
+      background-color: $white;
+    }
+  }
+
+  /*---- Newsletter ----*/
+
+  .newsletter {
+    @include mixin.flex-style;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.2em;
+    margin: 10em 2.5em;
+    gap: 1em;
+    animation: newsletter 2s infinite;
+
+    @keyframes newsletter {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    &:hover {
+      animation-play-state: paused;
+      color: $primary-color;
+    }
+
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 0.3em;
+    }
+
+    .newsletter__form {
+      @include mixin.flex-style;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2em;
+
+      label {
+        font-size: 1.2rem;
+        text-decoration: underline;
+      }
+      input {
+        width: 30rem;
+        height: 3rem;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        padding: 0.5em;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: $primary-color;
+      }
+
+      button {
+        width: 12.5rem;
+        height: 3.1rem;
+        border-radius: 5px;
+        background-color: $black;
+        color: $white;
+        font-size: 1.2rem;
+        padding: 0.5em;
+        cursor: pointer;
+        line-height: 1.6;
+      }
+    }
+  }
+}
